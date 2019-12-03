@@ -9,11 +9,11 @@ function [out1] = fun2Ihs_fixpt(V_n,I_br,coef1,coef2,Node_P,Node_N)
     fm = get_fimath();
 
     if Node_P ~= fi(0, 1, 2, 0, fm) && Node_N ~= fi(0, 1, 2, 0, fm)
-        out1 = fi(coef1*(fi_signed(V_n(Node_P)) - V_n(Node_N)) + coef2*I_br, 1, 32, 17, fm);
+        out1 = fi(coef1*(fi_signed(V_n(Node_P)) - V_n(Node_N)) + coef2*I_br, 1, 34, 19, fm);
     elseif Node_N == fi(0, 1, 2, 0, fm)
-        out1 = fi(coef1*V_n(Node_P) + coef2*I_br, 1, 32, 17, fm);
+        out1 = fi(coef1*V_n(Node_P) + coef2*I_br, 1, 34, 19, fm);
     else
-        out1 = fi(coef1*(fi_uminus(V_n(Node_N))) + coef2*I_br, 1, 32, 17, fm);
+        out1 = fi(coef1*(fi_uminus(V_n(Node_N))) + coef2*I_br, 1, 34, 19, fm);
     end
 
 end

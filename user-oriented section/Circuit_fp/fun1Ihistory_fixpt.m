@@ -7,16 +7,16 @@
 function [ I_history ] = fun1Ihistory_fixpt(I_history_1,I_source,Node_P,Node_N)
     % Normal branches
     fm = get_fimath();
-    I_history = fi(I_history_1, 1, 32, 17, fm);
+    I_history = fi(I_history_1, 1, 34, 19, fm);
 
     if  Node_P ~= fi(0, 1, 2, 0, fm) && Node_N ~= fi(0, 1, 2, 0, fm)
-        I_history(Node_N) = fi(I_history(Node_N) + I_source, 1, 32, 17, fm); 
+        I_history(Node_N) = fi(I_history(Node_N) + I_source, 1, 34, 19, fm); 
         I_history(Node_P) = I_history(Node_P) - I_source; 
     else
         if Node_N ~= fi(0, 1, 2, 0, fm) 
-            I_history(Node_N) = fi(I_history(Node_N) + I_source, 1, 32, 17, fm);
+            I_history(Node_N) = fi(I_history(Node_N) + I_source, 1, 34, 19, fm);
         elseif Node_P ~= fi(0, 1, 2, 0, fm) 
-            I_history(Node_P) = fi(I_history(Node_P) - I_source, 1, 32, 17, fm);  
+            I_history(Node_P) = fi(I_history(Node_P) - I_source, 1, 34, 19, fm);  
         end 
     end
 

@@ -7,13 +7,13 @@
 function [ I_history ] = fun2Ihistory_fixpt(I_history_1,I_source,c,Node_P_tp,Node_N_tp)
     % Transformer winding
     fm = get_fimath();
-    I_history = fi(I_history_1, 1, 32, 17, fm);
+    I_history = fi(I_history_1, 1, 34, 19, fm);
 
     if Node_N_tp ~= fi(0, 1, 2, 0, fm)
-         I_history(Node_P_tp) = fi(I_history(Node_P_tp) + I_source*c, 1, 32, 17, fm); 
+         I_history(Node_P_tp) = fi(I_history(Node_P_tp) + I_source*c, 1, 34, 19, fm); 
          I_history(Node_N_tp) = fi_signed(I_history(Node_N_tp)) - I_source*c;
      else
-         I_history(Node_P_tp) = fi(I_history(Node_P_tp) + I_source*c, 1, 32, 17, fm); 
+         I_history(Node_P_tp) = fi(I_history(Node_P_tp) + I_source*c, 1, 34, 19, fm); 
      end
 
 end

@@ -10,10 +10,10 @@ function [A] = Vnodal_fixpt(I_history,I_U,G,G_UU,G_UK,Vk,flag)
     if flag == fi(1, 1, 2, 0, fm) % Known voltage sources exist
         I_d_history = fi_signed(I_U) - G_UK*Vk;  
         V_U = G_UU*I_d_history;
-        A = fi(V_U, 1, 32, 17, fm);
+        A = fi(V_U, 1, 34, 19, fm);
     else % Only current sources exist
-        V_n = fi(G*I_history, 1, 32, 17, fm);
-        A = fi(V_n, 1, 32, 17, fm);
+        V_n = fi(G*I_history, 1, 34, 19, fm);
+        A = fi(V_n, 1, 34, 19, fm);
     end
 end
 

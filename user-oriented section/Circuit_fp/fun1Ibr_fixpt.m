@@ -9,17 +9,17 @@ function [ out1 ] = fun1Ibr_fixpt(V_n,G_br,coeftr,Ih,Node_P,Node_N,Node_P_tp,Nod
      fm = get_fimath();
 
      if Node_N_tp ~= fi(0, 1, 2, 0, fm) && Node_P ~= fi(0, 1, 2, 0, fm) && Node_N ~= fi(0, 1, 2, 0, fm)
-        out1 = fi(fi_signed(G_br*(fi_signed(V_n(Node_P)) - V_n(Node_N))) - coeftr*(fi_signed(V_n(Node_P_tp)) - V_n(Node_N_tp)) + Ih, 1, 32, 17, fm);
+        out1 = fi(fi_signed(G_br*(fi_signed(V_n(Node_P)) - V_n(Node_N))) - coeftr*(fi_signed(V_n(Node_P_tp)) - V_n(Node_N_tp)) + Ih, 1, 34, 19, fm);
      elseif Node_N_tp == fi(0, 1, 2, 0, fm) && Node_P == fi(0, 1, 2, 0, fm)
-        out1 = fi(fi_signed(G_br*(fi_uminus(V_n(Node_N)))) - coeftr*V_n(Node_P_tp) + Ih, 1, 32, 17, fm);
+        out1 = fi(fi_signed(G_br*(fi_uminus(V_n(Node_N)))) - coeftr*V_n(Node_P_tp) + Ih, 1, 34, 19, fm);
      elseif Node_N_tp == fi(0, 1, 2, 0, fm) && Node_N == fi(0, 1, 2, 0, fm)
-        out1 = fi(fi_signed(G_br*V_n(Node_P)) - coeftr*V_n(Node_P_tp) + Ih, 1, 32, 17, fm);
+        out1 = fi(fi_signed(G_br*V_n(Node_P)) - coeftr*V_n(Node_P_tp) + Ih, 1, 34, 19, fm);
      elseif Node_N_tp == fi(0, 1, 2, 0, fm)
-        out1 = fi(fi_signed(G_br*(fi_signed(V_n(Node_P)) - V_n(Node_N))) - coeftr*V_n(Node_P_tp) + Ih, 1, 32, 17, fm);
+        out1 = fi(fi_signed(G_br*(fi_signed(V_n(Node_P)) - V_n(Node_N))) - coeftr*V_n(Node_P_tp) + Ih, 1, 34, 19, fm);
      elseif Node_P == fi(0, 1, 2, 0, fm)
-        out1 = fi(fi_signed(G_br*(fi_uminus(V_n(Node_N)))) - coeftr*(fi_signed(V_n(Node_P_tp)) - V_n(Node_N_tp)) + Ih, 1, 32, 17, fm);
+        out1 = fi(fi_signed(G_br*(fi_uminus(V_n(Node_N)))) - coeftr*(fi_signed(V_n(Node_P_tp)) - V_n(Node_N_tp)) + Ih, 1, 34, 19, fm);
      else
-        out1 = fi(fi_signed(G_br*V_n(Node_P)) - coeftr*(fi_signed(V_n(Node_P_tp)) - V_n(Node_N_tp)) + Ih, 1, 32, 17, fm);
+        out1 = fi(fi_signed(G_br*V_n(Node_P)) - coeftr*(fi_signed(V_n(Node_P_tp)) - V_n(Node_N_tp)) + Ih, 1, 34, 19, fm);
      end
 
 end

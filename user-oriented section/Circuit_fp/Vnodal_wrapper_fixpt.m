@@ -5,9 +5,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function A = Vnodal_wrapper_fixpt(I_history,I_U,G,G_UU,G_UK,Vk,flag)
     fm = get_fimath();
-    I_history_in = fi( I_history, 1, 32, 17, fm );
+    I_history_in = fi( I_history, 1, 34, 19, fm );
     I_U_in = I_U;
-    G_in = fi( G, 1, 32, 17, fm );
+    G_in = fi( G, 1, 34, 19, fm );
     G_UU_in = G_UU;
     G_UK_in = G_UK;
     Vk_in = fi( Vk, 1, 2, 0, fm );

@@ -5,8 +5,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function I_history = fun1Ihistory_wrapper_fixpt(I_history,I_source,Node_P,Node_N)
     fm = get_fimath();
-    I_history_in = fi( I_history, 1, 32, 17, fm );
-    I_source_in = fi( I_source, 1, 32, 17, fm );
+    I_history_in = fi( I_history, 1, 34, 19, fm );
+    I_source_in = fi( I_source, 1, 34, 19, fm );
     Node_P_in = fi( Node_P, 1, 4, 0, fm );
     Node_N_in = fi( Node_N, 1, 4, 0, fm );
     [I_history_out] = fun1Ihistory_fixpt( I_history_in, I_source_in, Node_P_in, Node_N_in );

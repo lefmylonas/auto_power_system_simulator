@@ -81,7 +81,12 @@ while count <= size(time,2)
 end
 %%
 %%%%%%%%%%%%%%%% Error Estimation %%%%%%%%%%%%%%%%
-if strcmp(gcs,'Circuit')
+prompt = {"Do you want to compute the error between Simulink and NIS method? Answer 'y' or 'n'"};
+dlgtitle = "Input";
+dims = [1 35];
+answer = inputdlg(prompt,dlgtitle,dims);
+
+if answer{1,1}== 'y' && strcmp(gcs,'Circuit')
     Vload = logsout{1}.Values.Data(:,1);
     Iload = logsout{2}.Values.Data(:,1);
     Verr = abs(Out(1,:) - Vload');
@@ -90,7 +95,7 @@ if strcmp(gcs,'Circuit')
     plot(time,Verr,'-k',time,Ierr,':k');
     legend('Verr','Ierr'); 
     xlabel('Time (Seconds)');
-elseif strcmp(gcs,'Tphase')
+elseif answer{1,1}== 'y' && strcmp(gcs,'Tphase')
     Vag_load1 = logsout{1}.Values.Data(:,1);
     Vbg_load1 = logsout{1}.Values.Data(:,2);
     Vcg_load1 = logsout{1}.Values.Data(:,3);

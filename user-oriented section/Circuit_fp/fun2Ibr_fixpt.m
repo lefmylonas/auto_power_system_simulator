@@ -9,11 +9,11 @@ function [out1] = fun2Ibr_fixpt(V_n,G_br,Ih,Node_P,Node_N)
     fm = get_fimath();
 
     if Node_P ~= fi(0, 1, 2, 0, fm) && Node_N ~= fi(0, 1, 2, 0, fm)
-        out1 = fi(G_br*(fi_signed(V_n(Node_P)) - V_n(Node_N)) + Ih, 1, 32, 17, fm);
+        out1 = fi(G_br*(fi_signed(V_n(Node_P)) - V_n(Node_N)) + Ih, 1, 34, 19, fm);
     elseif Node_N == fi(0, 1, 2, 0, fm)
-        out1 = fi(G_br*V_n(Node_P) + Ih, 1, 32, 17, fm);
+        out1 = fi(G_br*V_n(Node_P) + Ih, 1, 34, 19, fm);
     else
-        out1 = fi(G_br*(fi_uminus(V_n(Node_N))) + Ih, 1, 32, 17, fm);
+        out1 = fi(G_br*(fi_uminus(V_n(Node_N))) + Ih, 1, 34, 19, fm);
     end
 
 end

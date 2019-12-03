@@ -5,11 +5,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function out1 = fun1Ihs_wrapper_fixpt(I_br,V_n,coef1,coef2,coeftr,Node_P,Node_N,Node_P_tp,Node_N_tp)
     fm = get_fimath();
-    I_br_in = fi( I_br, 1, 32, 17, fm );
-    V_n_in = fi( V_n, 1, 32, 17, fm );
-    coef1_in = fi( coef1, 1, 32, 17, fm );
-    coef2_in = fi( coef2, 1, 32, 17, fm );
-    coeftr_in = fi( coeftr, 1, 32, 17, fm );
+    I_br_in = fi( I_br, 1, 34, 19, fm );
+    V_n_in = fi( V_n, 1, 34, 19, fm );
+    coef1_in = fi( coef1, 1, 34, 19, fm );
+    coef2_in = fi( coef2, 1, 34, 19, fm );
+    coeftr_in = fi( coeftr, 1, 34, 19, fm );
     Node_P_in = fi( Node_P, 1, 3, 0, fm );
     Node_N_in = fi( Node_N, 1, 2, 0, fm );
     Node_P_tp_in = fi( Node_P_tp, 1, 4, 0, fm );

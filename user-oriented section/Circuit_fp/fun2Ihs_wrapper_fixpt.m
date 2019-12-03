@@ -5,10 +5,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function out1 = fun2Ihs_wrapper_fixpt(V_n,I_br,coef1,coef2,Node_P,Node_N)
     fm = get_fimath();
-    V_n_in = fi( V_n, 1, 32, 17, fm );
-    I_br_in = fi( I_br, 1, 32, 17, fm );
-    coef1_in = fi( coef1, 1, 32, 17, fm );
-    coef2_in = fi( coef2, 1, 32, 17, fm );
+    V_n_in = fi( V_n, 1, 34, 19, fm );
+    I_br_in = fi( I_br, 1, 34, 19, fm );
+    coef1_in = fi( coef1, 1, 34, 19, fm );
+    coef2_in = fi( coef2, 1, 34, 19, fm );
     Node_P_in = fi( Node_P, 1, 4, 0, fm );
     Node_N_in = fi( Node_N, 1, 4, 0, fm );
     [out1_out] = fun2Ihs_fixpt( V_n_in, I_br_in, coef1_in, coef2_in, Node_P_in, Node_N_in );

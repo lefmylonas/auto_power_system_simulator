@@ -5,9 +5,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function out1 = fun2Ibr_wrapper_fixpt(V_n,G_br,Ih,Node_P,Node_N)
     fm = get_fimath();
-    V_n_in = fi( V_n, 1, 32, 17, fm );
-    G_br_in = fi( G_br, 1, 32, 17, fm );
-    Ih_in = fi( Ih, 1, 32, 17, fm );
+    V_n_in = fi( V_n, 1, 34, 19, fm );
+    G_br_in = fi( G_br, 1, 34, 19, fm );
+    Ih_in = fi( Ih, 1, 34, 19, fm );
     Node_P_in = fi( Node_P, 1, 4, 0, fm );
     Node_N_in = fi( Node_N, 1, 4, 0, fm );
     [out1_out] = fun2Ibr_fixpt( V_n_in, G_br_in, Ih_in, Node_P_in, Node_N_in );

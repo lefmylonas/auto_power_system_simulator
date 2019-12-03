@@ -5,10 +5,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function out1 = fun1Ibr_wrapper_fixpt(V_n,G_br,coeftr,Ih,Node_P,Node_N,Node_P_tp,Node_N_tp)
     fm = get_fimath();
-    V_n_in = fi( V_n, 1, 32, 17, fm );
-    G_br_in = fi( G_br, 1, 32, 17, fm );
-    coeftr_in = fi( coeftr, 1, 32, 17, fm );
-    Ih_in = fi( Ih, 1, 32, 17, fm );
+    V_n_in = fi( V_n, 1, 34, 19, fm );
+    G_br_in = fi( G_br, 1, 34, 19, fm );
+    coeftr_in = fi( coeftr, 1, 34, 17, fm );
+    Ih_in = fi( Ih, 1, 34, 19, fm );
     Node_P_in = fi( Node_P, 1, 3, 0, fm );
     Node_N_in = fi( Node_N, 1, 2, 0, fm );
     Node_P_tp_in = fi( Node_P_tp, 1, 4, 0, fm );
