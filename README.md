@@ -18,7 +18,7 @@ The purpose of the project is to automate and simplify the design of customized 
 
 2. Open the `user-oriented section` folder and run the `Circuit.slx` file.
 
-3. Open the `auto_ps_sim_lib.slx` file, copy the `Algorithm 1` and `Algorithm 2` blocks and paste them into the open `Circuit.slx` file.
+3. Verify that the `Algorithm 1` and `Algorithm 2` blocks are visible. If not, check that the `auto_ps_sim_lib.slx` file is in the same directory as the `Circuit.slx`. If so, open the `auto_ps_sim_lib.slx` file, copy the `Algorithm 1` and `Algorithm 2` blocks and paste them into the open `Circuit.slx` file.
 
 4. Press the Run button of Simulink, wait for the simulation to finish and double click on the `Algorithm 1` block to start the NIS analysis.
 
