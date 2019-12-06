@@ -13,6 +13,7 @@ architecture Behavioral of testbench is
 
 COMPONENT TOP_LEVEL
 	port(rst,clk: in std_logic;
+		  V_s: in matrix(1 to No_Vk, 1 to 1) := (others=>(others=>(others=>'0')));
 	     I_s: in matrix(1 to No_Src-No_Vk, 1 to 1);
 	     Vnodal: out matrix(1 to No_Nodes, 1 to 1);
 	     Ibranch: out matrix(1 to No_Brn, 1 to 1));
@@ -50,7 +51,7 @@ end save_report;
 
 begin
 
-DUT: TOP_LEVEL port map(rst => rst,clk => clk,I_s => current_Is,Vnodal => current_Vnodal,Ibranch => current_Ibranch);
+DUT: TOP_LEVEL port map(rst => rst,clk => clk, V_s => open, I_s => current_Is,Vnodal => current_Vnodal,Ibranch => current_Ibranch);
 
 clk_process: process
    begin
