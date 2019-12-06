@@ -15,7 +15,7 @@ ARCHITECTURE arch of TOP_LEVEL is
 
 COMPONENT PS_SIM
 	port(rst,clk: in std_logic;
-		  V_s: in matrix(1 to No_Vk, 1 to 1) := (others=>(others=>(others=>'0')));
+	     V_s: in matrix(1 to No_Vk, 1 to 1) := (others=>(others=>(others=>'0')));
 	     I_s: in matrix(1 to No_Src-No_Vk, 1 to 1);
 	     Vnodal: out matrix(1 to No_Nodes, 1 to 1);
 	     Ibranch: out matrix(1 to No_Brn, 1 to 1));
